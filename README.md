@@ -14,6 +14,6 @@ sudo mitmweb -p 443 --mode regular --set keep_host_header --set validate_inbound
 
 ### As docker
 ```shell
-docker run --name mitm_youtube_repeller --rm -d -p 443:8080 -v $(pwd):/data  mitmproxy/mitmproxy mitmproxy -s /data/scripts/redirect.py -s /data/script.py
+docker run --name mitm_youtube_repeller --rm -d -p 443:8080 -v $(pwd)/data:/data -v $(pwd)/certs:/home/mitmproxy/.mitmproxy mitmproxy/mitmproxy mitmproxy -s /data/scripts/redirect.py -s /data/mitm_youtube_repeller.py
 docker logs mitmproxy -f
 ```
