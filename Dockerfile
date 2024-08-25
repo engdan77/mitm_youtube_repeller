@@ -4,6 +4,7 @@ FROM python:3.11.1
 WORKDIR /app
 
 COPY ./src/script.py .
+COPY ./src/start.sh .
 
 RUN pip install mitmproxy loguru
 
