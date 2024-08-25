@@ -1,0 +1,1 @@
+mitmdump --mode regular --set keep_host_header --set validate_inbound_headers=false -s script.py
