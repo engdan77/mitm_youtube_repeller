@@ -7,6 +7,11 @@
 
 ## How to run
 
+### Clone the repository
+```shell
+git clone https://github.com/engdan77/mitm_youtube_repeller.git && cd mitm_youtube_repeller
+```
+
 ### From source
 ```shell
 sudo mitmweb -p 443 --mode regular --set keep_host_header --set validate_inbound_headers=false -s script.py --web-host 0.0.0.0
@@ -14,6 +19,5 @@ sudo mitmweb -p 443 --mode regular --set keep_host_header --set validate_inbound
 
 ### As docker
 ```shell
-docker run --name mitm_youtube_repeller --rm -d -p 443:8080 -v $(pwd)/data:/data -v $(pwd)/certs:/home/mitmproxy/.mitmproxy mitmproxy/mitmproxy mitmproxy -s /data/scripts/redirect.py -s /data/mitm_youtube_repeller.py
-docker logs mitmproxy -f
+docker build --tag mitm_youtube_repeller . && docker run --name mitm_youtube_repeller -p 443:8080 -v $(pwd)/certs:/root/.mitmproxy mitm_youtube_repeller
 ```
