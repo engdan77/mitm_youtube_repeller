@@ -1,6 +1,8 @@
 # YouTube "shorts" repeller
 
+<center>
 <img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/repeller.png" alt="repeller" width=200px />
+</center>
 
 ## Background and reflections
 
@@ -11,9 +13,9 @@ It was not that easy either, but it was possible. So on the device on the networ
 
 
 ## Simplified visualisation of how this works
-
+<center>
 <img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" width=600px />
-
+</center>
 
 
 
