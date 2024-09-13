@@ -12,7 +12,7 @@ It was not that easy either, but it was possible. So on the device on the networ
 
 ## Simplified visualisation of how this works
 
-<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" alt="mitm_demo" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" width="200" />
 
 
 
