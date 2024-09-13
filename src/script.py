@@ -5,6 +5,8 @@ import time
 from collections import UserList
 
 
+__email__ = "daniel@engvalls.eu"
+
 def now():
     """
     Get the current time as an integer timestamp.
