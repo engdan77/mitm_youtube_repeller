@@ -1,6 +1,6 @@
 # YouTube "shorts" repeller
 
-<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/repeller.png" alt="repeller" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/repeller.png" alt="repeller" width=200px />
 
 ## Background and reflections
 
@@ -12,7 +12,7 @@ It was not that easy either, but it was possible. So on the device on the networ
 
 ## Simplified visualisation of how this works
 
-<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" width=200px height=200px />
+<img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" width=600px />
 
 
 
