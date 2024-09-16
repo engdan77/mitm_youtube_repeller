@@ -13,6 +13,9 @@ It was not that easy either, but it was possible. So on the device on the networ
 
 
 ## Simplified visualisation of how this works
+
+Rather than setting a fixed proxy configuration I preferred to modify it so that the DHCP server tells the client to use a different DNS server (based on pi-hole) so it'd be easier to manage what FQDN shall pass through the MITM from a central location rather than everything passing through this solution.
+
 <center>
 <img src="https://raw.githubusercontent.com/engdan77/project_images/master/uPic/mitm_demo.gif" width=600px />
 </center>
@@ -23,17 +26,19 @@ It was not that easy either, but it was possible. So on the device on the networ
 
 1. Install pi-hole as a local DNS following instructions such as [this](https://pi-hole.net/)
 
-   1. To ensure your DNS will resolve the IP address to the server you run this project at I would modify the `03-pihole-wildcard.conf` to include somethin such as - assuming `10.1.1.1`is the IP address where the above MITM runs:
+   1. To ensure your DNS will resolve the IP address to the server you run this project at I would modify the `03-pihole-wildcard.conf` to include something such as - assuming `10.1.1.1`is the IP address where the above MITM runs:
 
    ```
    address=/googlevideo.com/10.1.1.1
    ```
 
-2. Follow the MITM proxy installation instructions below
+2. Ensure your router's DHCP server leases the IP address of your pi-hole DNS instead (I had to follow [this](https://www.reddit.com/r/orbi/comments/ny8fv9/ip_dhcp_from_isp_dns_local/) guide)
 
-3. Install the certificate you get out from your MITM proxy using instructions like [this](https://docs.mitmproxy.org/stable/concepts-certificates/)
+3. Follow the MITM proxy installation instructions below
 
-4. Within the `script.py`you can decide if you wish to modify these default settings
+4. Install the certificate you get out from your MITM proxy using instructions like [this](https://docs.mitmproxy.org/stable/concepts-certificates/)
+
+5. Within the `script.py` you can decide if you wish to modify these default settings
 
    ```
    MAX_VIEWS = 10   # Max video views .. 
